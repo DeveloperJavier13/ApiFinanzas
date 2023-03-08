@@ -19,10 +19,7 @@ public class EgresoController : ControllerBase
     public IActionResult Get(int? page)
     {   
         var cont = egresoService.Get().Count();
-        return Ok(new {
-            g=egresoService.Get(),
-            c=$" Contiene: {cont} filas"     
-        });        
+        return Ok(egresoService.Get());        
     }
     
     [HttpPost]
