@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-      <link rel="shortcut icon" href="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\img\finanzas icon.ico" type="image/x-icon">      </head>
-     <title>Finanzas</title>
+      <link rel="shortcut icon" href="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\img\finanzas icon.ico" type="image/x-icon"></head>
+      <link href="DataTables/datatables.min.css" rel="stylesheet"/>
+      <link href="DataTables\jQuery-3.6.0\jquery-3.6.0.min.js" rel="stylesheet"/>
+      
+      <title>Finanzas</title>
     
      <link rel="stylesheet" href="style.css">
      <br>
@@ -15,6 +18,12 @@
         <p id="tema">Egresos <input type="text" name="tema"/> </p>
         <p id="tema">Concepto de egreso <input type="text" name="concepto"/></p>
         <button name="egreso">Ingresar egreso</button>
+       </div>
+       <div>
+        <button id="btnConsultarTabla" class="btnConsultar">Mostrar datos</button>
+       </div>
+       <div>
+        <table id="areas-table" class="tableAreas table-striped"></table>
        </div>
       </br>
        <div class="divFin">
@@ -25,4 +34,6 @@
         
     </body>
     <script src="./main.js"></script>
+    <script src="./tabla.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
 </head>
