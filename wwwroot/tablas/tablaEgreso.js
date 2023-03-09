@@ -13,7 +13,7 @@ btnConsultarAreas.addEventListener('click', () => {
             let tablasArea = $('#areas-table').DataTable({
                 data: dataSetEgresos,
                 columns: [
-                    {title: "Ingreso"},
+                    {title: "EgresoID"},
                     {title: "Concepto"},
                 ],
                 "bDestroy": true,
