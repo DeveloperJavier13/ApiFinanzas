@@ -20,7 +20,10 @@ public class IngresoController : ControllerBase
     public IActionResult Get(int? page)
     {
         var cont = ingresoService.Get().Count();
-        return Ok(ingresoService.Get());        
+        return Ok(new {
+            g=ingresoService.Get(),
+            c=$" Contiene: {cont} filas"     
+        });      
     }
     
     [HttpPost]
