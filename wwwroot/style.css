@@ -5,3 +5,16 @@
     font-family: Tahoma;
     text-transform: uppercase;
 }
+
+#tema{
+    color: black;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: Tahoma;
+    text-transform: uppercase;
+}
+
+.divFin{
+    width: 15em;
+    border: 1px outset #00A4BD; 
+}
