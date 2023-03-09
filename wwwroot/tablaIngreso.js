@@ -1,7 +1,7 @@
-var btnConsultarAreas = document.querySelector('#btnConsultarTabla');
-console.log('entra al metodo');
+var btnConsultarAreas = document.querySelector('#btnConsultarTablaIngreso');
+console.log('entra al metodo ingreso');
 btnConsultarAreas.addEventListener('click', () => {
-    fetch(URL)
+    fetch(URL2)
         .then(res => res.json())
         .then(data => {
             let dataSetEgresos =[];
@@ -10,7 +10,7 @@ btnConsultarAreas.addEventListener('click', () => {
                 dataSetEgresos.push(Object.values(registro));
             });
 
-            let tablasArea = $('#areas-table').DataTable({
+            let tablasArea = $('#areas-tableIngreso').DataTable({
                 data: dataSetEgresos,
                 columns: [
                     {title: "Egreso"},

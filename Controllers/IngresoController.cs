@@ -4,7 +4,7 @@ using ApiFinanzas.Services;
 namespace ApiFinanzas.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/")]
 
 public class IngresoController : ControllerBase
 {
@@ -16,8 +16,7 @@ public class IngresoController : ControllerBase
         ingresoService = service;
     }
 
-    [HttpGet]
-    [Route("ingreso/mostrar")]
+    [HttpGet("ingreso/mostrar")]
     public IActionResult Get(int? page)
     {
         var cont = ingresoService.Get().Count();
