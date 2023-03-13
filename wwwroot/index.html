@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<br>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+      <link rel="shortcut icon" href="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\img\finanzas icon.ico" type="image/x-icon"></head>
+      <link href="DataTables/datatables.min.css" rel="stylesheet"/>
+      <link href="DataTables\jQuery-3.6.0\jquery-3.6.0.min.js" rel="stylesheet"/>
+      
+      <title>Finanzas</title>
+    
+     <link rel="stylesheet" href="./css/style.css">
+     <br>
+       <h1 class="titulo">Finanzas</h1>
+
+       <!-- Egresos -->
+       <!-- Tabla y registro -->
+       <div class="divFin">
+        <p id="tema">Egresos <input id="txtEgreso" type="text" name="txtEgreso"/> </p>
+        <p id="tema">Concepto de egreso <input id="txtConEgreso" type="text" name="txtConEgreso"/></p>
+        <button id="btnIngresarEgreso" name="btnIngresarEgreso"  type="button">Ingresar egreso</button>
+        <button id="btnPruebaEgr" name="egreso" type="button">Prueba</button>
+        <label for="txtEgreso">Name: </label>
+        <p id="valueInputEgr">asdad</p> 
+       </div>
+       <div>
+        <button id="btnConsultarTablaEgreso" class="btnConsultar" type="button">Mostrar datos</button>
+       </div>
+       <div>
+        <table id="areas-table" class="tableAreas table-striped"></table>
+       </div>
+      </br>
+      <div class="divFin">
+        <p id="tema">Actualizar registro de egreso</p>
+        <p>ID:  <input id="txtActEgrID" type="text" name="txtActEgrID"/></p>
+        <p id="tema">Egreso <input id="txtActEgr" type="text" name="txtActEgr"/></p>
+        <p id="tema">Concepto de egreso <input id="txtActConEgr" type="text" name="txtActConEgr"/></p>
+        <button id="btnActualizarEgreso" name="btnActualizarEgreso"  type="button"/>Actualizar egreso</button>
+        <button id="btnPruebaActEgr" name="btnPruebaActEgr" type="button">Prueba</button>
+        <label for="txtActEgr">Name: </label>
+        <p id="valueInputActEgr">asdad</p>
+       </div>
+      </br>
+      <div class="divFin">
+        <p id="tema">Eliminar registro de egreso</p>
+        <p>ID:  <input id="txtDelEgrID" type="text" name="txtDelEgrID"/></p>
+        <button id="btnEliminarEgreso" name="btnEliminarEgreso"  type="button"/>Eliminar egreso</button>
+        <button id="btnPruebaDelEgr" name="btnPruebaDelEgr" type="button">Prueba</button>
+        <label for="txtDelEgr">Name: </label>
+        <p id="valueInputDelEgr">asdad</p>
+       </div>
+      </br>
+      
+       <!-- Ingreso -->
+       <p>-----------------------------------------------------</p>
+       <div class="divFin">
+        <p id="tema">Ingresos <input id="txtIngreso" type="text" name="txtIngreso"/> </p>
+        <p id="tema">Concepto de ingreso <input id="txtConIngreso" type="text" name="txtConIngreso"/></p>
+        <button id="btnIngresarIngreso" name="btnIngresarIngreso"  type="button">Ingresar ingreso</button>
+        <button id="btnPrueba" name="ingreso" type="button">Prueba</button>
+        <label for="txtIngreso">Name: </label>
+        <p id="valueInput">asdad</p> 
+       </div>
+       <div>
+        <button id="btnConsultarTablaIngreso" class="btnConsultar" type="button">Mostrar datos</button>
+       </div>
+       <div>
+        <table id="areas-tableIngreso" class="tableAreas table-striped"></table>
+       </div>
+      </br>
+       <div class="divFin">
+        <p id="tema">Actualizar registro de ingreso</p>
+        <p>ID:  <input id="txtActIngID" type="text" name="txtActIngID"/></p>
+        <p id="tema">Ingreso <input id="txtActIng" type="text" name="txtActIng"/></p>
+        <p id="tema">Concepto de ingreso <input id="txtActConIng" type="text" name="txtActConIng"/></p>
+        <button id="btnActualizarIngreso" name="btnActualizarIngreso"  type="button"/>Actualizar ingreso</button>
+        <button id="btnPruebaAct" name="btnPruebaAct" type="button">Prueba</button>
+        <label for="txtAct">Name: </label>
+        <p id="valueInputAct">asdad</p>
+       </div>
+      </br>
+      <div class="divFin">
+        <p id="tema">Eliminar registro de ingreso</p>
+        <p>ID:  <input id="txtDelIngID" type="text" name="txtDelIngID"/></p>
+        <button id="btnEliminarIngreso" name="btnEliminarIngreso"  type="button"/>Eliminar ingreso</button>
+        <button id="btnPruebaAct" name="btnPruebaAct" type="button">Prueba</button>
+        <label for="txtAct">Name: </label>
+        <p id="valueInputAct">asdad</p>
+       </div>
+      </br>
+
+      <!-- Suma -->
+      <div class="divFin">
+        <p id="tema">Suma</p>
+        <button id="btnSuma" name="btnSuma"  type="button"/>ver suma</button>
+        <p><label id="valueInputSuma"></label></p>
+      </div>
+    </body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main/mainEgreso.js"></script>
+    <script src="./main/main.js"></script>
+    <script src="./tablas/tablaEgreso.js"></script>
+    <script src="./tablas/tablaIngreso.js"></script>
+    <script src="./suma.js"></script>
+    <script src="./dato.js"></script>
+    <script src="DataTables/datatables.min.js"></script>
+    
+</head>

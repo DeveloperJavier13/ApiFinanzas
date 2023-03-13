@@ -14,6 +14,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSqlServer<FinanzasContext>(builder.Configuration.GetConnectionString("cnTareas"));
 builder.Services.AddScoped<IEgresoService, EgresoService>();
 builder.Services.AddScoped<IIngresoService, IngresoService>();
+builder.Services.AddCors(option =>{
+    option.AddPolicy("default", policy =>{
+        policy.WithOrigins("http://localhost:5030")
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowAnyOrigin();
+        });
+    });
 
 var app = builder.Build();
 
@@ -33,6 +41,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("default");
 
 app.MapControllers();
 
