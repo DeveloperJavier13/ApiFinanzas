@@ -73,10 +73,6 @@ async function actualizarDatoEgr(){
     var egrID = String(actEgrID.value);
     var egr = String(txtactEgr.value);
     var conEgr = String(actConEgr.value);
-    console.log({egrID}); 
-    console.log(isNaN(egr));
-    console.log(egr);
-    console.log(conEgr);
     const {data, status} = await api.put('/egreso/actualizar/' + egrID,{
             egreso: egr,
             conceptoEgr: conEgr,
