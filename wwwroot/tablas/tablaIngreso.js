@@ -3,7 +3,6 @@ var btnIngresarIngreso = document.querySelector('#btnIngresarIngreso');
 var btnActualizarIngreso = document.querySelector('#btnActualizarIngreso');
 var btnEliminarIngreso = document.querySelector('#btnEliminarIngreso');
 
-
 var ingreso = document.querySelector('#txtIngreso');
 var conceptoIng = document.querySelector('#txtConIngreso');
 

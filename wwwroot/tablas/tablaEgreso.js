@@ -3,7 +3,6 @@ var btnIngresarEgreso = document.querySelector('#btnIngresarEgreso');
 var btnActualizarEgreso = document.querySelector('#btnActualizarEgreso');
 var btnEliminarEgreso = document.querySelector('#btnEliminarEgreso');
 
-
 console.log('entra al metodo egreso');
 
 var egreso = document.querySelector('#txtEgreso');

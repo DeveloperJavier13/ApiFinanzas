@@ -10,6 +10,4 @@ async function mostrarSuma(){
         console.log(respuesta.data);
         document.getElementById("valueInputSuma").innerHTML = respuesta.data;
     });
-
-    
 }
