@@ -20,14 +20,10 @@ public class IngresoController : ControllerBase
     public IActionResult Get(int? page)
     {
         var cont = ingresoService.Get().Count();
-        return Ok(new {
-            g=ingresoService.Get(),
-            c=$" Contiene: {cont} filas"     
-        });      
+        return Ok(ingresoService.Get());      
     }
     
-    [HttpPost]
-    [Route("ingreso/crear")]
+    [HttpPost("ingreso/crear")]
     public IActionResult Post([FromBody] Ingresos ing)
     {        
         ingresoService.Save(ing);
@@ -35,7 +31,6 @@ public class IngresoController : ControllerBase
     }
 
     [HttpPut("ingreso/actualizar/{id}")]
-    [Route("ingreso/actualizar")]
     public IActionResult Put(Guid id, [FromBody] Ingresos ing)
     {        
         ingresoService.Update(id, ing);

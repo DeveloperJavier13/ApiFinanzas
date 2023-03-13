@@ -22,7 +22,7 @@ public class SumaController : ControllerBase
     public IActionResult Get(){
         var i=ingresoService.Get().Sum(x=>x.ingreso);
         var e=egresoService.Get().Sum(x=>x.egreso);
-
+        
         return Ok($"La suma total de los gastos es: {i-e}");
         
     }

@@ -22,8 +22,7 @@ public class EgresoController : ControllerBase
         return Ok(egresoService.Get());        
     }
     
-    [HttpPost]
-    [Route ("egreso/crear")]
+    [HttpPost("egreso/crear")]
     public IActionResult Post([FromBody] Egresos egr)
     {        
         egresoService.Save(egr);

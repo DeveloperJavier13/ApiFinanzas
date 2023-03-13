@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <head>
+      <link rel="shortcut icon" href="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\img\finanzas icon.ico" type="image/x-icon">
+      <link href="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\DataTables\datatables.min.css" rel="stylesheet"/>
+      <link href="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\DataTables\jQuery-3.6.0\jquery-3.6.0.min.js" rel="stylesheet"/>
+    </head>
+    <title>Finanzas</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+    
+TemplateMo 557 Grad School
+
+https://templatemo.com/tm-557-grad-school
+
+-->
+  </head>
+
+<body>
+
+   
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>HARF</em> Finanzas</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Home</a></li>
+        <li class="has-submenu"><a href="#section1">Finanzas</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">Ingreos</a></li>
+            <li><a href="#section3">Egresos</a></li>
+            <li><a href="#section4">Suma Total</a></li>
+          </ul>
+        </li>
+        <li><a href="#section6">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/images/course-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h6>Finanzas de:</h6>
+              <h2><em>Ingresos</em> y <em> Egresos</em></h2>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="features-post">
+            <div class="features-content">
+              <div class="content-show">
+                <h4>Ingresos</h4>
+              </div>
+              <div class="content-hide">
+                <p>Se podrá insertar tanto la cantidad del ingreso, como el concepto del mismo</p>
+                <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post second-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4>Egresos</h4>
+              </div>
+              <div class="content-hide">
+                <p>Se podrá insertar tanto la cantidad del egreso, como el concepto del mismo</p>
+                <div class="scroll-to-section"><a href="#section3">more info.</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post third-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4>Suma total</h4>
+              </div>
+              <div class="content-hide">
+                <p>Se podrá visualizar la suma total de los gastos</p>
+                <div class="scroll-to-section"><a href="#section4">More info.</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Ingresos -->
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Ingresos</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <div class="divFin">
+              <p id="tema">Ingresos <input id="txtIngreso" type="text" name="txtIngreso"/> </p>
+              <p id="tema">Concepto de ingreso <input id="txtConIngreso" type="text" name="txtConIngreso"/></p>
+              <button id="btnIngresarIngreso" name="btnIngresarIngreso"  type="button">Ingresar ingreso</button>
+             </div>
+             <div>
+              <button id="btnConsultarTablaIngreso" class="btnConsultar" type="button">Mostrar datos</button>
+             </div>
+             <div class="divTable">
+              <table id="areas-tableIngreso" class="tableAreas table-striped"></table>
+             </div>
+      <!-- Actualizar dato -->
+            </br>
+            <div class="divFin">
+             <p id="tema">Actualizar registro de ingreso</p>
+             <p>ID:  <input id="txtActIngID" type="text" name="txtActIngID"/></p>
+             <p id="tema">Ingreso <input id="txtActIng" type="text" name="txtActIng"/></p>
+             <p id="tema">Concepto de ingreso <input id="txtActConIng" type="text" name="txtActConIng"/></p>
+             <button id="btnActualizarIngreso" name="btnActualizarIngreso"  type="button"/>Actualizar ingreso</button>
+            </div>
+        <!-- Eliminar Dato -->
+            </br>
+            <div class="divFin">
+              <p id="tema">Eliminar registro de ingreso</p>
+              <p>ID:  <input id="txtDelIngID" type="text" name="txtDelIngID"/></p>
+              <button id="btnEliminarIngreso" name="btnEliminarIngreso"  type="button"/>Eliminar ingreso</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Egresos -->
+  <section class="section coming-soon" data-section="section3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading2">
+            <h2>Egresos</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <div class="divFin">
+              <p id="tema">Egresos <input id="txtEgreso" type="text" name="txtEgreso"/> </p>
+              <p id="tema">Concepto de egreso <input id="txtConEgreso" type="text" name="txtConEgreso"/></p>
+              <button id="btnIngresarEgreso" name="btnIngresarEgreso"  type="button">Ingresar egreso</button>
+             </div>
+             <div>
+              <button id="btnConsultarTablaEgreso" class="btnConsultar" type="button">Mostrar datos</button>
+             </div>
+             <div class="divTable">
+              <table id="areas-table" class="tableAreas table-striped"></table>
+             </div>
+    <!-- Actualizar -->
+              </br>
+              <div class="divFin">
+                <p id="tema">Actualizar registro de egreso</p>
+                <p>ID:  <input id="txtActEgrID" type="text" name="txtActEgrID"/></p>
+                <p id="tema">Egreso <input id="txtActEgr" type="text" name="txtActEgr"/></p>
+                <p id="tema">Concepto de egreso <input id="txtActConEgr" type="text" name="txtActConEgr"/></p>
+                <button id="btnActualizarEgreso" name="btnActualizarEgreso"  type="button"/>Actualizar egreso</button>
+              </div>
+    <!-- Eliminar -->
+              </br>
+              <div class="divFin">
+                <p id="tema">Eliminar registro de egreso</p>
+                <p>ID:  <input id="txtDelEgrID" type="text" name="txtDelEgrID"/></p>
+                <button id="btnEliminarEgreso" name="btnEliminarEgreso"  type="button"/>Eliminar egreso</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Suma -->
+  <section class="section courses" data-section="section4">
+    <div class="section-heading">
+      <h2>Suma Total</h2>
+  </div>
+    <div class="container"> 
+      <div class="row">
+        <div class="col-md-12">
+          <div id='tabs'>
+            <div class="divFin">
+              <p id="tema">Suma</p>
+              <button id="btnSuma" name="btnSuma"  type="button"/>ver suma</button>
+              <p><label id="valueInputSuma"></label></p>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Dirección -->
+
+  <section class="section contact" data-section="section6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Dirección HARF</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.465671023704!2d-94.54592248511486!3d18.003579887712146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85e987f30259ccff%3A0x48533e69619895fc!2sContro-Tec%2C%20S.A.%20De%20C.V.!5e0!3m2!1ses-419!2smx!4v1678681235537!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p><i class="fa fa-copyright"></i> Copyright 2023 by HARF Technologies
+          
+           | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">Ricardo Javier</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- "C:\Users\javie\Downloads\grad-school\templatemo_557_grad_school\vendor\bootstrap\js\bootstrap.min.js" -->
+    <script src=".\vendor\bootstrap\js\bootstrap.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+    <!-- <script src="./main/mainEgreso.js"></script>
+    <script src="./main/mainIngreso.js"></script>
+    <script src="./tablas/tablaEgreso.js"></script>
+    <script src="./tablas/tablaIngreso.js"></script>
+    <script src="./datos/datosEgresos.js"></script>
+    <script src="DataTables/datatables.min.js"></script> 
+  "C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\DataTables\jQuery-3.6.0\jquery-3.6.0.min.js"-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\main\mainEgreso.js"></script>
+    <script src="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\main\mainIngreso.js"></script>
+    <script src="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\DataTables\datatables.min.js"></script>
+    <script src="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\tablas\tablaIngreso.js"></script>
+    <script src="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\suma.js"></script>
+    <script src="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\tablas\tablaEgreso.js"></script>
+    <script src="C:\Users\javie\OneDrive\Escritorio\proyectosGit\ApiFinanzas\wwwroot\DataTables\datatables.min.js"></script>
+</body>
+</html>
