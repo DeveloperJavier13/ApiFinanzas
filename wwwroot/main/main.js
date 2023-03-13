@@ -1,4 +1,4 @@
-console.log('holamundo');
+
 const api = axios.create({
     baseURL:"http://localhost:5030/api/"
 });
